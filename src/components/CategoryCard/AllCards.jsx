@@ -1,5 +1,10 @@
 import styles from "./AllCards.module.scss";
 import CategoryCard from "./CategoryCard";
+import AddAmount from "./Modals/AddAmount";
+import AddCategory from "./Modals/AddCategory";
+import EditCategory from "./Modals/EditCategory";
+import SubtractAmount from "./Modals/SubtractAmount";
+import TransferAmount from "./Modals/TransferAmount";
 import NoCard from "./NoCard";
 
 const DUMMY_DATA = [
@@ -14,10 +19,18 @@ const AllCards = () => {
   ));
 
   return (
-    <section className={styles.section}>
-      {cards}
-      <NoCard />
-    </section>
+    <>
+      <AddAmount />
+      <SubtractAmount />
+      <TransferAmount />
+      <EditCategory />
+      <AddCategory />
+
+      <section className={styles.section}>
+        {cards}
+        <NoCard />
+      </section>
+    </>
   );
 };
 

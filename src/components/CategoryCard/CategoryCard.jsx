@@ -17,7 +17,9 @@ const CategoryCard = ({ data }) => {
     <div className={styles.card}>
       <div className={styles.edit}>
         <TbPencil className="icon hover" onClick={toggleMenuHandler} />
-        {isVisible && <CategoryMenu toggleMenuHandler={toggleMenuHandler} />}
+        {isVisible && (
+          <CategoryMenu toggleMenuHandler={toggleMenuHandler} data={data} />
+        )}
       </div>
 
       <h2>{title}</h2>
